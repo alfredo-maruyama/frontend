@@ -50,6 +50,9 @@ public class CheckBoxFrame extends JFrame // checkbox vai herdar do jframe
             font = new Font("Serif", Font.ITALIC, 14);
          else
             font = new Font("Serif", Font.PLAIN, 14);
+
+         textField.setFont(font); 
+         
          if (underlineJCheckBox.isSelected()) {
             font = textField.getFont();
             Map attributes = font.getAttributes();
@@ -58,7 +61,6 @@ public class CheckBoxFrame extends JFrame // checkbox vai herdar do jframe
             font = new Font(attributes);
          }
 
-         textField.setFont(font); 
       } 
    }
 } 
