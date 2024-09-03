@@ -32,28 +32,28 @@ public class MouseTrackerFrame extends JFrame
       @Override
       public void mouseClicked(MouseEvent event)
       {
-         statusBar.setText(String.format("Clicked at [%d, %d]", // [d,d] referencia a double (um atribuido ao getX e o outro ao getY)
+         statusBar.setText(String.format("Clicked at [left: %d, top: %d, right: %d, bottom: %d]",  // [d,d] referencia a double (um atribuido ao getX e o outro ao getY)
             event.getX(), event.getY(), mousePanel.getWidth() - event.getX(), mousePanel.getHeight() - event.getY()));
       } 
 
       @Override
       public void mousePressed(MouseEvent event) // "mouse pressionado"
       {
-         statusBar.setText(String.format("Pressed at [%d, %d]", 
+         statusBar.setText(String.format("Pressed at [left: %d, top: %d, right: %d, bottom: %d]", 
             event.getX(), event.getY(), mousePanel.getWidth() - event.getX(), mousePanel.getHeight() - event.getY()));
       }
  
       @Override
       public void mouseReleased(MouseEvent event) // "ao soltar o mouse"
       {
-         statusBar.setText(String.format("Released at [%d, %d]", 
+         statusBar.setText(String.format("Released at [left: %d, top: %d, right: %d, bottom: %d]", 
             event.getX(), event.getY(), mousePanel.getWidth() - event.getX(), mousePanel.getHeight() - event.getY()));
       }
 
       @Override
       public void mouseEntered(MouseEvent event) 
       {
-         statusBar.setText(String.format("Clicked at [left: %d, top: %d, right: %d, bottom: %d]",  
+         statusBar.setText(String.format("Mouse entered at [left: %d, top: %d, right: %d, bottom: %d]",
             event.getX(), event.getY(), mousePanel.getWidth() - event.getX(), mousePanel.getHeight() - event.getY()));
          mousePanel.setBackground(Color.GREEN);
       }
@@ -69,15 +69,15 @@ public class MouseTrackerFrame extends JFrame
       @Override
       public void mouseDragged(MouseEvent event) // mouse ao ser arrastado/puxado
       {
-         statusBar.setText(String.format("Dragged at [%d, %d]", 
+         statusBar.setText(String.format("Dragged at [left: %d, top: %d, right: %d, bottom: %d]",
             event.getX(), event.getY(), mousePanel.getWidth() - event.getX(), mousePanel.getHeight() - event.getY()));
       } 
 
       @Override
       public void mouseMoved(MouseEvent event) // mouse ao ser movido
       {
-         statusBar.setText(String.format("Moved at [%d, %d]", 
+         statusBar.setText(String.format("Moved at [left: %d, top: %d, right: %d, bottom: %d]", 
             event.getX(), event.getY(), mousePanel.getWidth() - event.getX(), mousePanel.getHeight() - event.getY()));
       } 
-   } //
+   } 
 } 
